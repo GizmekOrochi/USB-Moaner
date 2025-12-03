@@ -9,9 +9,11 @@ EXEC_PATH="$INSTALL_DIR/$APP_NAME"
 ENV_FILE="$SERVICE_DIR/environment"
 BINARY_PATH="$(realpath $(dirname "$0")/../bin/$APP_NAME)"
 
+BASE_DIR="$(realpath "$(dirname "$0")/..")"
 
-IMG_PATH="../resource/Layout/background.png"
-SND_PATH="../resource/FX/Effect.mp3"
+IMG_PATH="$BASE_DIR/resource/Layout/background.png"
+SND_PATH="$BASE_DIR/resource/FX/Effect.mp3"
+
 
 echo "🔧 Installing $APP_NAME as a user service..."
 
