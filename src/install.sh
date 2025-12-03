@@ -7,7 +7,8 @@ SERVICE_DIR="$HOME/.config/systemd/user"
 SERVICE_FILE="$SERVICE_DIR/$APP_NAME.service"
 EXEC_PATH="$INSTALL_DIR/$APP_NAME"
 ENV_FILE="$SERVICE_DIR/environment"
-BINARY_PATH="../bin/$APP_NAME"
+BINARY_PATH="$(realpath $(dirname "$0")/../bin/$APP_NAME)"
+
 
 IMG_PATH="../resource/Layout/background.png"
 SND_PATH="../resource/FX/Effect.mp3"
